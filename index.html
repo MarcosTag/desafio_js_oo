@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Desafio - Javascript OO</title>
 
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="js/script.js"></script>
   </head>
 
@@ -13,19 +13,62 @@
     <div class="box-page">
       <header>
         <!-- CONTEÚDO DO HEADER -->
+         <h1>Desafio - Javascript OO</h1>
       </header>
 
       <main>
         <!-- CONTEÚDO PRINCIPAL -->
-      </main>
+        <div class="main-box">
 
-      <aside>
-        <!-- CONTEÚDO FLUTUANTE (SFC) -->
-      </aside>
+          <h2>Escolha o seu veículo:</h2>
+          <form name="vehicle">
+            <div class="input-box">
+              <input type="radio" name="vehicle_type" id="type_car" value="carro">
+              <label for="type_car">Carro</label>
+            </div>
+
+            <div class="input-box">
+              <input type="radio" name="vehicle_type" id="type_motorcycle" value="moto">
+              <label for="type_motorcycle">Moto</label>
+            </div>
+
+            <br />
+            
+            <div class="input-box">
+              <label for="vehicle_name"><h2>Modelo do veículo:</h2></label>
+              <input type="text" name="vehicle_name" id="vehicle_name" placeholder="nome e modelo">
+            </div>
+
+            <br />  
+
+            <h2>Tipo de motor:</h2>
+            <div class="input-box">
+              <input type="radio" name="engine_type" id="combustion" value="1">
+              <label for="combustion">Combustão</label>
+            </div>
+
+            <div class="input-box">
+              <input type="radio" name="engine_type" id="eletric" value="0">
+              <label for="eletric">Elétrico</label>
+            </div>
+
+            <br /> 
+
+            <input type="submit" value="Verificar" id="verificar">
+            
+          </form>
+        </div>
+
+        <aside id="aside-tag">
+          <!-- <h1>CONTEÚDO FLUTUANTE</h1> -->
+        </aside>   
+
+      </main>
 
       <footer>
         <!-- CONTEÚDO DO RODAPÉ -->
       </footer>
     </div>
+    
   </body>
 </html>

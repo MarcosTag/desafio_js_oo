@@ -8,11 +8,13 @@ const formulario = document.vehicle;
 formulario.addEventListener('submit', (e) => {
 
     e.preventDefault();
+
+    const path = document.location.pathname;
     
     if( formulario.vehicle_type.value === 'carro' ) {
 
         const carro = new Carro(formulario.vehicle_name.value, formulario.engine_type.value);
-        const imagem = formulario.engine_type.value === '0' ? '../assets/images/carro_eletrico.jpg' : '../assets/images/carro.png';
+        const imagem = formulario.engine_type.value === '0' ? `${path}assets/images/carro_eletrico.jpg` : `${path}assets/images/carro.png`;
 
         exibeMensagem(carro.acelerar(true).msg_1, carro.acelerar(true).msg_2, imagem);
 
@@ -22,7 +24,7 @@ formulario.addEventListener('submit', (e) => {
     } else if ( formulario.vehicle_type.value === 'moto' ) {
 
         const moto = new Moto(formulario.vehicle_name.value, formulario.engine_type.value);
-        const imagem = formulario.engine_type.value === '0' ? '../assets/images/moto_eletrica.jpg' : '../assets/images/moto.png';
+        const imagem = formulario.engine_type.value === '0' ? `${path}assets/images/moto_eletrica.jpg` : `${path}assets/images/moto.png`;
 
         exibeMensagem(moto.acelerar(true).msg_1, moto.acelerar(true).msg_2, imagem);
 
